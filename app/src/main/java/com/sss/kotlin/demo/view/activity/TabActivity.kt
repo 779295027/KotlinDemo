@@ -15,14 +15,14 @@ class TabActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView<ActivityTabBinding>(this, R.layout.activity_tab)
-        fragmentone = UserFragment()
+            fragmentone = UserFragment()
         changeFragment(fragmentone!!)
     }
 
 
     fun changeFragment(fragment: Fragment) {
         val transaction = supportFragmentManager.beginTransaction()
-        transaction.add(R.id.frame_layout, fragment, fragment.javaClass.simpleName)
+        transaction.add(R.id.frame_layout, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
     }

@@ -26,5 +26,7 @@ class MainActivity : AppCompatActivity() {
             binding!!.user = userEntity
             binding!!.invalidateAll()
         })
+
+
     }
 }
